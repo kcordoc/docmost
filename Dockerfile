@@ -9,6 +9,7 @@ COPY . .
 
 RUN npm install -g pnpm
 RUN pnpm install --frozen-lockfile
+RUN pnpm nx reset
 RUN pnpm build
 
 FROM base AS installer
